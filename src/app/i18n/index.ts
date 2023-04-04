@@ -4,7 +4,6 @@ import { BackendModule, CallbackError, createInstance, ReadCallback } from 'i18n
 const debug = createDebug('app:i18n');
 
 import './locale/en-gb.js';
-
 export const languages = {
     'en-GB': {
         name: 'English',
@@ -13,7 +12,15 @@ export const languages = {
             ['Samuel Elliott', 'https://gitlab.fancy.org.uk/samuel', 'https://github.com/samuelthomas2774'],
         ],
     },
+    'de-DE': {
+        name: 'Japanese',
+        app: () => import('./locale/jp-JA.js'),
+        authors: [
+            ['neco222', 'https://github.com/neco222'],
+        ],
+    },
 };
+
 
 const namespaces = {
     app: 'app',
